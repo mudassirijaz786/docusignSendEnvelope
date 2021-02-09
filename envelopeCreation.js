@@ -6,9 +6,9 @@ function makeEnvelope(envelopeArgs) {
 
   envelope.templateId = envelopeArgs.templateId;
 
-  let { templateRole } = envelopeArgs;
+  let [templateRoles] = envelopeArgs.templateRoles;
 
-  envelope.templateRoles = [templateRole[0]];
+  envelope.templateRoles = [templateRoles];
 
   envelope.status = envelopeArgs.status;
 
@@ -18,7 +18,7 @@ function makeEnvelope(envelopeArgs) {
 const sendEnvelope = async (mainArgs) => {
   let dsApiClient = new docusign.ApiClient();
 
-  dsApiClient.setBasePath(mainArgs.basePath);
+  dsApiClient.setBasePath(mainArgs.baseUrl);
 
   dsApiClient.addDefaultHeader(
     "Authorization",
