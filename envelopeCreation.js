@@ -30,9 +30,9 @@ function makeEnvelope(envelopeArgs) {
   const z = "54000";
 
   dateSignedTabs.value = new Date();
-  company.value = "Kwanso";
-  title.value = "Nadeem Yasin";
-  address.value = "353-A, Johar Town";
+  company.value = "XYZ";
+  title.value = "Mudassir";
+  address.value = "NYC, USA";
   fullName.value = "Developer";
   city.value = `${c}, ${s} ${z}`;
   spellPercentage.value = "Fifteen Percent";
